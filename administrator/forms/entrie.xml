@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="entrie">
+			<field
+				name="id"
+				type="hidden" />
+			<field
+				name="event_id"
+				type="sql"
+				default="1"			
+				label="COM_TVM_ENTRY_EDIT_FIELD_EVENT_ID"
+				query="SELECT id, title FROM #__tvm_events"
+				key_field="id"
+				value_field="title"
+			/>
+			<field
+				name="user_id"
+				type="user"
+				label="COM_TVM_ENTRY_EDIT_FIELD_USER_ID"
+				description="COM_TVM_ENTRY_EDIT_FIELD_USER_ID_DESC"
+				class="inputbox"
+				default="" />
+			<field
+				name="state"
+				type="list"
+				label="COM_TVM_ENTRY_EDIT_FIELD_STATE"
+				description="COM_TVM_ENTRY_EDIT_FIELD_STATE_DESC"
+				class="inputbox"
+				default="" >
+				<option value="1">COM_TVM_GENERAL_YES</option>
+				<option value="2">COM_TVM_GENERAL_MAYBE</option>
+				<option value="3">COM_TVM_GENERAL_NO</option>
+				<option value="4">COM_TVM_GENERAL_FORCED_NO</option>
+			</field>
+				
+			<field 
+				name="acknowledged" 
+				type="radio" 
+				class="inputbox"
+				label="COM_TVM_ENTRY_EDIT_FIELD_ACK" 
+				description="COM_TVM_ENTRY_EDIT_FIELD_ACK_DESC"
+				default="0" >
+				<option value="0">COM_TVM_GENERAL_NO</option>
+				<option value="1">COM_TVM_GENERAL_YES</option>
+			</field>			
+			<field
+				name="comment"
+				type="text"
+				label="COM_TVM_ENTRY_EDIT_FIELD_COMMENT"
+				description="COM_TVM_ENTRY_EDIT_FIELD_COMMENT_DESC"
+				size="40"
+				class="inputbox"
+				default="" />
+			<field
+				name="created"
+				type="date"
+				label="COM_TVM_ENTRY_EDIT_FIELD_CREATED"
+				description="COM_TVM_ENTRY_EDIT_FIELD_CREATED_DESC"
+				class="inputbox"
+				readonly="true"
+				default="" />
+			<field
+				name="updated"
+				type="text"
+				label="COM_TVM_ENTRY_EDIT_FIELD_UPDATED"
+				description="COM_TVM_ENTRY_EDIT_FIELD_UPDATED_DESC"
+				size="40"
+				class="inputbox"
+				readonly="true"
+				default="" />
+            <field
+				name="updated_by"
+				type="user"
+				readonly="true"
+				label="COM_TVM_ENTRY_EDIT_FIELD_EDITOR"
+				description="COM_TVM_ENTRY_EDIT_FIELD_EDITOR_DESC" />
+			<field 
+				name="published"
+				type="checkbox" 
+				label="COM_TVM_ENTRY_EDIT_FIELD_PUBLISHED" 
+				description="COM_TVM_ENTRY_EDIT_FIELD_PUBLISHED_DESC"
+				size="40"
+				default="1" />
+		</fieldset>		
+</form>

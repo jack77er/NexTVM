@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="tvm" >
+			<field
+				name="id"
+				type="hidden"/>
+			<field
+				name="title"
+				type="text"
+				label="COM_TVM_ADD_FIELD_TITLE"
+				description="COM_TVM_ADD_FIELD_TITLE_DESC"
+				size="40"
+				class="inputbox"
+				required="true"
+				default="" />
+			<field 
+				name="category" 
+				type="sql" 
+				default="10" 
+				label="COM_TVM_ADD_FIELD_CATEGORY"
+				description="COM_TVM_ADD_FIELD_CATEGORY_DESC"
+				query="SELECT id, name FROM #__tvm_categories" 
+				key_field="id" 
+				required="true"
+				value_field="name"
+			/>
+			<field
+				name="date"
+				type="calendar"
+				label="COM_TVM_ADD_FIELD_DATE"
+				description="COM_TVM_ADD_FIELD_DATE_DESC"
+				size="20"
+				class="inputbox"
+				default=""
+				format="%Y-%m-%d"
+				required="true"
+				filter="none"/>
+			<field
+				name="starttime"
+				type="text"
+				label="COM_TVM_ADD_FIELD_START"
+				description="COM_TVM_ADD_FIELD_START_DESC"
+				size="20"
+				class="inputbox"
+				required="true"
+				default="" />
+				
+			<field 
+				name="duration" 
+				type="number" 
+				default="120" 
+				label="COM_TVM_ADD_FIELD_DURATION" 
+				description="COM_TVM_ADD_FIELD_DURATION_DESC" 
+				min="0" 
+				max="40320" 
+				required="true"
+				step="1" />
+			<field
+				name="location"
+				type="text"
+				label="COM_TVM_ADD_FIELD_LOCATION"
+				description="COM_TVM_ADD_FIELD_LOCATION_DESC"
+				size="40"
+				class="inputbox"
+				required="true"
+				default="" />
+            <field
+				name="user_id"
+				type="user"
+				label="COM_TVM_ADD_FIELD_TRAINER"
+				required="true"
+				description="COM_TVM_ADD_FIELD_TRAINER_DESC" />
+			<field 
+				name="max_users" 
+				type="number" 
+				default="20" 
+				label="COM_TVM_ADD_FIELD_MAX_USERS" 
+				description="COM_TVM_ADD_FIELD_MAX_USERS_DESC" 
+				required="true"
+				min="0" 
+				step="1" />
+			<field 
+				name="deadline" 
+				type="number" 
+				default="120" 
+				label="COM_TVM_ADD_FIELD_DEADLINE" 
+				description="COM_TVM_ADD_FIELD_DEADLINE_DESC" 
+				min="0" 
+				required="true"
+				max="40320" 
+				step="1" />
+			<field 
+				name="periodic" 
+				type="list" 
+				label="COM_TVM_ADD_FIELD_PERIODIC" 
+				description="COM_TVM_ADD_FIELD_PERIODIC_DESC" 
+				default="none">
+				<option value="none">COM_TVM_PERIODIC_NONE</option>
+				<option value="daily">COM_TVM_PERIODIC_DAILY</option>
+				<option value="weekly">COM_TVM_PERIODIC_WEEKLY</option>
+				<option value="monthly">COM_TVM_PERIODIC_MONTHLY</option>
+				<option value="yearly">COM_TVM_PERIODIC_YEARLY</option>
+			</field> 
+			<field 
+				type="hidden"
+				name="periodic_value" />
+			<field 
+				name="event_comment"
+				type="text" 
+				label="COM_TVM_ADD_FIELD_COMMENT" 
+				description="COM_TVM_ADD_FIELD_COMMENT_DESC"
+				size="40"		
+				class="inputbox"
+				default="" />
+			<field 
+				name="closed"
+				type="radio" 
+				label="COM_TVM_ADD_FIELD_CLOSED" 
+				description="COM_TVM_ADD_FIELD_CLOSED_DESC"
+				size="40" 
+				default="0" >
+				<option value="0">COM_TVM_GENERAL_NO</option>
+				<option value="1">COM_TVM_GENERAL_YES</option>
+			</field>
+			<field 
+				name="template"
+				type="radio" 
+				label="COM_TVM_ADD_FIELD_TEMPLATE" 
+				description="COM_TVM_ADD_FIELD_TEMPLATE_DESC"
+				size="40" 
+				default="0" >
+				<option value="0">COM_TVM_GENERAL_NO</option>
+				<option value="1">COM_TVM_GENERAL_YES</option>
+			</field>
+			<field 
+				name="published"
+				type="checkbox" 
+				label="COM_TVM_ADD_FIELD_PUBLISHED" 
+				description="COM_TVM_ADD_FIELD_PUBLISHED_DESC"
+				size="40"
+				default="1" />
+
+		</fieldset>
+</form>

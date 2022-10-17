@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<menu
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:joomla.org"
+	xsi:schemaLocation="urn:joomla.org menu.xsd"
+	>
+	<menuitem
+		title="COM_FOOS"
+		type="heading"
+		icon="comment"
+		class="class:comment"
+		>
+		<menuitem
+			title="COM_FOOS"
+			type="component"
+			element="com_foos"
+			link="index.php?option=com_foos"
+			quicktask="index.php?option=com_foos&amp;view=foo&amp;layout=edit"
+			quicktask-title="COM_FOOS"
+		/>
+
+		<menuitem
+			title="JCATEGORY"
+			type="component"
+			element="com_foos"
+			link="index.php?option=com_categories&amp;extension=com_foos"
+			quicktask="index.php?option=com_categories&amp;view=category&amp;layout=edit&amp;extension=com_foos"
+			quicktask-title="JCATEGORY"
+		/>
+	</menuitem>
+</menu>
