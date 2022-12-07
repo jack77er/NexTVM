@@ -440,14 +440,14 @@ class DisplayController extends BaseController
 		$event_id = $jinput->post->get('event_id', '', 'INTEGER');
 		$password = $jinput->post->get('pass', '', 'STRING');
 		$user_id = $jinput->post->get('user_id', '', 'INTEGER');
-		$ack = $jinput->post->get('ack', '', 'BOOLEAN');
+		$ack = $jinput->post->get('ack', '', 'INTEGER');
 		$editor_id = $jinput->post->get('editor_id', '', 'INTEGER');
 		
 		if($editor_id == NULL || $editor_id == '0' ) {
 			echo "Access denied";
 			return $this;
 		}
-		if( Factory::getUser($editor_id)->password != $password ) {
+		if( Factory::getUser($editor_id)->password != urldecode($password) ) {
 			echo "Access denied";
 			return $this;
 		}
